@@ -1,0 +1,71 @@
+$color-ccc:#ccc;
+$color-eee:#eee;
+$color-000:#000;
+$color-fff:#fff;
+
+.card{
+    border-radius: 10px !important;
+    border: 1px solid $color-ccc;
+}
+
+.font-size-14{
+    font-size: 14px;
+}
+
+.font-size-12{
+    font-size: 12px;
+}
+
+.border-left{
+    border-left: 1px solid $color-ccc;
+}
+
+.padding-start-30{
+    padding-left: 30px;
+}
+
+.icons{
+    
+}
+
+.btn-icon{
+    color: #333;
+    background-color: #eee;
+    text-transform: capitalize;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    left: -10px;
+}
+
+.css-ptiqhd-MuiSvgIcon-root{
+    font-size: 1rem !important;
+}
+
+.btn{
+    border-radius: 5px;
+    border: 1px solid $color-000;
+    outline: none;
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none !important;
+    color: $color-000;
+    &:hover{
+        color: $color-000;
+    }
+}
+
+.Account-Type{
+    background-color: $color-eee;
+    border-radius: 5px;
+    padding: 10px 15px;
+    align-items: flex-start;
+    width: fit-content;
+}
