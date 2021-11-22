@@ -22,6 +22,7 @@ export default class Informatin extends Component {
                         <div><small className='font-size-12'>Remaining Limit:<strong className='font-size-12 ms-2'>1,369.45 AED</strong></small></div>
                         <div><small className='font-size-12'>Account Balance:<strong className='font-size-12 ms-2'>1,369.45 AED creditor</strong></small></div>
                     </div>
+                    
                 </div>
                 <div className='d-flex flex-column align-items-center w-100 '>
                     <button className='btn col-6 mb-2'><span></span>Increase Credit</button>
