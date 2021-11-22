@@ -10,9 +10,9 @@ export default class MUTextField extends Component {
                     sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}}
                     noValidate
                     autoComplete="off">
-                    <TextField id={this.props.id}
-                        label={this.props.labalName}
-                        type={this.props.type}
+                    <TextField id={this.props?.id}
+                        label={this.props?.labalName}
+                        type={this.props?.type}
                         autoComplete="current-password"
                         variant="standard"/>
                 </Box>

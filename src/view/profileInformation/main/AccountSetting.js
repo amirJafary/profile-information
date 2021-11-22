@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import MUTextField from '../../../component/textField/MUTextField'
 import PersonalInformation from './PersonalInformation'
 
+import '../../../asset/scss/profileInformation.scss'
+
 export default class AccountSetting extends Component {
     render() {
         return (

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import avatar from '../../../asset/image/avatar.png'
-import AutorenewIcon from '@mui/icons-material/Autorenew';
 export default class Informatin extends Component {
     render() {
         return (
@@ -14,9 +13,9 @@ export default class Informatin extends Component {
                 </div>
                 <div className='d-flex mb-3 padding-start-30'>
                     <div className='border-left'></div>
-                    <div>
-                        <div><button className='btn-icon'><i className='ns-icon-refresh'></i></button></div>
-                        <div><button className='btn-icon'><i className='ns-icon-refresh'></i></button></div>
+                    <div className='d-flex flex-column pt-1'>
+                        <span className='btn-icon mb-1'><i className='ns-icon-refresh'></i></span>
+                        <span className='btn-icon'><i className='ns-icon-refresh'></i></span>
                     </div>
                     <div>
                         <div><small className='font-size-12'>Remaining Limit:<strong className='font-size-12 ms-2'>1,369.45 AED</strong></small></div>
