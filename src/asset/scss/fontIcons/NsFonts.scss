@@ -1,0 +1,738 @@
+@import "./NsVariables.scss";
+@font-face {
+    font-family: "NsFont";
+    src: url("../../icons/NsIcon.eot?jvfuba");
+    src: url("../../icons/NsIcon.eot?jvfuba#iefix") format("embedded-opentype"),
+        url("../../icons/NsIcon.ttf?jvfuba") format("truetype"), url("../../icons/NsIcon.woff?jvfuba") format("woff"),
+        url("../../icons/NsIcon.svg?jvfuba#NsFont") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ns-icon-"],
+[class*=" ns-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "#{$icomoon-font-family}" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ns-icon-terms-of-use {
+    &:before {
+        content: $ns-icon-terms-of-use;
+    }
+}
+.ns-icon-admin-users {
+    &:before {
+        content: $ns-icon-admin-users;
+    }
+}
+.ns-icon-back-to-cart {
+    &:before {
+        content: $ns-icon-back-to-cart;
+    }
+}
+.ns-icon-Cummunication-log {
+    &:before {
+        content: $ns-icon-Cummunication-log;
+    }
+}
+.ns-icon-customer-users {
+    &:before {
+        content: $ns-icon-customer-users;
+    }
+}
+.ns-icon-Custom-filter {
+    &:before {
+        content: $ns-icon-Custom-filter;
+    }
+}
+.ns-icon-display-info {
+    &:before {
+        content: $ns-icon-display-info;
+    }
+}
+.ns-icon-file-checking {
+    &:before {
+        content: $ns-icon-file-checking;
+    }
+}
+.ns-icon-orders {
+    &:before {
+        content: $ns-icon-orders;
+    }
+}
+.ns-icon-payments {
+    &:before {
+        content: $ns-icon-payments;
+    }
+}
+.ns-icon-ppr-info {
+    &:before {
+        content: $ns-icon-ppr-info;
+    }
+}
+.ns-icon-reports {
+    &:before {
+        content: $ns-icon-reports;
+    }
+}
+.ns-icon-testmonial {
+    &:before {
+        content: $ns-icon-testmonial;
+    }
+}
+.ns-icon-user-address {
+    &:before {
+        content: $ns-icon-user-address;
+    }
+}
+.ns-icon-user-address-1 {
+    &:before {
+        content: $ns-icon-user-address-1;
+    }
+}
+
+.ns-icon-Added-to-list {
+    &:before {
+        content: $ns-icon-Added-to-list;
+    }
+}
+
+.ns-icon-down {
+    &:before {
+        content: $ns-icon-down;
+    }
+}
+.ns-icon-up {
+    &:before {
+        content: $ns-icon-up;
+    }
+}
+
+.ns-icon-redo {
+    &:before {
+        content: $ns-icon-redo;
+    }
+}
+.ns-icon-retry {
+    &:before {
+        content: $ns-icon-retry;
+    }
+}
+.ns-icon-undo {
+    &:before {
+        content: $ns-icon-undo;
+    }
+}
+
+.ns-icon-blog {
+    &:before {
+        content: $ns-icon-blog;
+    }
+}
+.ns-icon-Comments {
+    &:before {
+        content: $ns-icon-Comments;
+    }
+}
+.ns-icon-dashboard {
+    &:before {
+        content: $ns-icon-dashboard;
+    }
+}
+.ns-icon-file {
+    &:before {
+        content: $ns-icon-file;
+    }
+}
+.ns-icon-folder-thumbnail {
+    &:before {
+        content: $ns-icon-folder-thumbnail;
+    }
+}
+.ns-icon-news {
+    &:before {
+        content: $ns-icon-news;
+    }
+}
+.ns-icon-Promotions {
+    &:before {
+        content: $ns-icon-Promotions;
+    }
+}
+.ns-icon-reply {
+    &:before {
+        content: $ns-icon-reply;
+    }
+}
+.ns-icon-single-pages {
+    &:before {
+        content: $ns-icon-single-pages;
+    }
+}
+.ns-icon-slider {
+    &:before {
+        content: $ns-icon-slider;
+    }
+}
+.ns-icon-testmonial-1 {
+    &:before {
+        content: $ns-icon-testmonial-1;
+    }
+}
+.ns-icon-account {
+    &:before {
+        content: $ns-icon-account;
+    }
+}
+.ns-icon-add {
+    &:before {
+        content: $ns-icon-add;
+    }
+}
+.ns-icon-address {
+    &:before {
+        content: $ns-icon-address;
+    }
+}
+.ns-icon-align-center-horizontal {
+    &:before {
+        content: $ns-icon-align-center-horizontal;
+    }
+}
+.ns-icon-align-center-vertical {
+    &:before {
+        content: $ns-icon-align-center-vertical;
+    }
+}
+.ns-icon-align-down {
+    &:before {
+        content: $ns-icon-align-down;
+    }
+}
+.ns-icon-align-left {
+    &:before {
+        content: $ns-icon-align-left;
+    }
+}
+.ns-icon-align-right {
+    &:before {
+        content: $ns-icon-align-right;
+    }
+}
+.ns-icon-align-top {
+    &:before {
+        content: $ns-icon-align-top;
+    }
+}
+.ns-icon-archived-order {
+    &:before {
+        content: $ns-icon-archived-order;
+    }
+}
+.ns-icon-auto-delivery-setting {
+    &:before {
+        content: $ns-icon-auto-delivery-setting;
+    }
+}
+.ns-icon-avatar {
+    &:before {
+        content: $ns-icon-avatar;
+    }
+}
+.ns-icon-back {
+    &:before {
+        content: $ns-icon-back;
+    }
+}
+.ns-icon-back-thin {
+    &:before {
+        content: $ns-icon-back-thin;
+    }
+}
+.ns-icon-call {
+    &:before {
+        content: $ns-icon-call;
+    }
+}
+.ns-icon-cart {
+    &:before {
+        content: $ns-icon-cart;
+    }
+}
+.ns-icon-change {
+    &:before {
+        content: $ns-icon-change;
+    }
+}
+.ns-icon-change-file {
+    &:before {
+        content: $ns-icon-change-file;
+    }
+}
+.ns-icon-change-password {
+    &:before {
+        content: $ns-icon-change-password;
+    }
+}
+.ns-icon-choose-file {
+    &:before {
+        content: $ns-icon-choose-file;
+    }
+}
+.ns-icon-circle-confirm {
+    &:before {
+        content: $ns-icon-circle-confirm;
+    }
+}
+.ns-icon-close {
+    &:before {
+        content: $ns-icon-close;
+    }
+}
+.ns-icon-computer {
+    &:before {
+        content: $ns-icon-computer;
+    }
+}
+.ns-icon-confirm {
+    &:before {
+        content: $ns-icon-confirm;
+    }
+}
+.ns-icon-copy {
+    &:before {
+        content: $ns-icon-copy;
+    }
+}
+.ns-icon-courier {
+    &:before {
+        content: $ns-icon-courier;
+    }
+}
+.ns-icon-credit {
+    &:before {
+        content: $ns-icon-credit;
+    }
+}
+.ns-icon-cretical {
+    &:before {
+        content: $ns-icon-cretical;
+    }
+}
+.ns-icon-cut {
+    &:before {
+        content: $ns-icon-cut;
+    }
+}
+.ns-icon-delete {
+    &:before {
+        content: $ns-icon-delete;
+    }
+}
+.ns-icon-delivery-request {
+    &:before {
+        content: $ns-icon-delivery-request;
+    }
+}
+.ns-icon-details {
+    &:before {
+        content: $ns-icon-details;
+    }
+}
+.ns-icon-dis-select-all {
+    &:before {
+        content: $ns-icon-dis-select-all;
+    }
+}
+.ns-icon-double-quotation-left {
+    &:before {
+        content: $ns-icon-double-quotation-left;
+    }
+}
+.ns-icon-double-quotation-right {
+    &:before {
+        content: $ns-icon-double-quotation-right;
+    }
+}
+.ns-icon-download {
+    &:before {
+        content: $ns-icon-download;
+    }
+}
+.ns-icon-drag-drop {
+    &:before {
+        content: $ns-icon-drag-drop;
+    }
+}
+.ns-icon-edit {
+    &:before {
+        content: $ns-icon-edit;
+    }
+}
+.ns-icon-email {
+    &:before {
+        content: $ns-icon-email;
+    }
+}
+.ns-icon-exclemation {
+    &:before {
+        content: $ns-icon-exclemation;
+    }
+}
+.ns-icon-expand-down {
+    &:before {
+        content: $ns-icon-expand-down;
+    }
+}
+.ns-icon-expand-left {
+    &:before {
+        content: $ns-icon-expand-left;
+    }
+}
+.ns-icon-expand-right {
+    &:before {
+        content: $ns-icon-expand-right;
+    }
+}
+.ns-icon-expand-up {
+    &:before {
+        content: $ns-icon-expand-up;
+    }
+}
+.ns-icon-files-manager {
+    &:before {
+        content: $ns-icon-files-manager;
+    }
+}
+.ns-icon-filter {
+    &:before {
+        content: $ns-icon-filter;
+    }
+}
+.ns-icon-financial-report {
+    &:before {
+        content: $ns-icon-financial-report;
+    }
+}
+.ns-icon-find-orders {
+    &:before {
+        content: $ns-icon-find-orders;
+    }
+}
+.ns-icon-fit {
+    &:before {
+        content: $ns-icon-fit;
+    }
+}
+.ns-icon-flip-horizontal {
+    &:before {
+        content: $ns-icon-flip-horizontal;
+    }
+}
+.ns-icon-flip-vertical {
+    &:before {
+        content: $ns-icon-flip-vertical;
+    }
+}
+.ns-icon-folder {
+    &:before {
+        content: $ns-icon-folder;
+    }
+}
+.ns-icon-frequently-question {
+    &:before {
+        content: $ns-icon-frequently-question;
+    }
+}
+.ns-icon-home {
+    &:before {
+        content: $ns-icon-home;
+    }
+}
+.ns-icon-increase-credit {
+    &:before {
+        content: $ns-icon-increase-credit;
+    }
+}
+.ns-icon-information {
+    &:before {
+        content: $ns-icon-information;
+    }
+}
+.ns-icon-inproccess-order {
+    &:before {
+        content: $ns-icon-inproccess-order;
+    }
+}
+.ns-icon-invoice-details {
+    &:before {
+        content: $ns-icon-invoice-details;
+    }
+}
+.ns-icon-jpg-file {
+    &:before {
+        content: $ns-icon-jpg-file;
+    }
+}
+.ns-icon-large-view {
+    &:before {
+        content: $ns-icon-large-view;
+    }
+}
+.ns-icon-menu {
+    &:before {
+        content: $ns-icon-menu;
+    }
+}
+.ns-icon-minus {
+    &:before {
+        content: $ns-icon-minus;
+    }
+}
+.ns-icon-more {
+    &:before {
+        content: $ns-icon-more;
+    }
+}
+.ns-icon-my-orders {
+    &:before {
+        content: $ns-icon-my-orders;
+    }
+}
+.ns-icon-new-folder {
+    &:before {
+        content: $ns-icon-new-folder;
+    }
+}
+.ns-icon-next {
+    &:before {
+        content: $ns-icon-next;
+    }
+}
+.ns-icon-next-thin {
+    &:before {
+        content: $ns-icon-next-thin;
+    }
+}
+.ns-icon-no-item-selected {
+    &:before {
+        content: $ns-icon-no-item-selected;
+    }
+}
+.ns-icon-notification-setting {
+    &:before {
+        content: $ns-icon-notification-setting;
+    }
+}
+.ns-icon-open-folder {
+    &:before {
+        content: $ns-icon-open-folder;
+    }
+}
+.ns-icon-paste {
+    &:before {
+        content: $ns-icon-paste;
+    }
+}
+.ns-icon-payment {
+    &:before {
+        content: $ns-icon-payment;
+    }
+}
+.ns-icon-pdf-file {
+    &:before {
+        content: $ns-icon-pdf-file;
+    }
+}
+.ns-icon-pdf-thumbnail {
+    &:before {
+        content: $ns-icon-pdf-thumbnail;
+    }
+}
+.ns-icon-picture-thumbnail {
+    &:before {
+        content: $ns-icon-picture-thumbnail;
+    }
+}
+.ns-icon-pie-chart {
+    &:before {
+        content: $ns-icon-pie-chart;
+    }
+}
+.ns-icon-plus {
+    &:before {
+        content: $ns-icon-plus;
+    }
+}
+.ns-icon-preparing-order {
+    &:before {
+        content: $ns-icon-preparing-order;
+    }
+}
+.ns-icon-print {
+    &:before {
+        content: $ns-icon-print;
+    }
+}
+.ns-icon-privacy-policy {
+    &:before {
+        content: $ns-icon-privacy-policy;
+    }
+}
+.ns-icon-product-details {
+    &:before {
+        content: $ns-icon-product-details;
+    }
+}
+.ns-icon-profile-information {
+    &:before {
+        content: $ns-icon-profile-information;
+    }
+}
+.ns-icon-question {
+    &:before {
+        content: $ns-icon-question;
+    }
+}
+.ns-icon-ready-order {
+    &:before {
+        content: $ns-icon-ready-order;
+    }
+}
+.ns-icon-refresh {
+    &:before {
+        content: $ns-icon-refresh;
+    }
+}
+.ns-icon-rename {
+    &:before {
+        content: $ns-icon-rename;
+    }
+}
+.ns-icon-resize {
+    &:before {
+        content: $ns-icon-resize;
+    }
+}
+
+.ns-icon-rotate-ccw {
+    &:before {
+        content: $ns-icon-rotate-ccw;
+    }
+}
+.ns-icon-rotate-cw {
+    &:before {
+        content: $ns-icon-rotate-cw;
+    }
+}
+.ns-icon-rounded-corner {
+    &:before {
+        content: $ns-icon-rounded-corner;
+    }
+}
+.ns-icon-save {
+    &:before {
+        content: $ns-icon-save;
+    }
+}
+.ns-icon-scroll-up {
+    &:before {
+        content: $ns-icon-scroll-up;
+    }
+}
+.ns-icon-search {
+    &:before {
+        content: $ns-icon-search;
+    }
+}
+.ns-icon-security-setting {
+    &:before {
+        content: $ns-icon-security-setting;
+    }
+}
+.ns-icon-select-all {
+    &:before {
+        content: $ns-icon-select-all;
+    }
+}
+.ns-icon-sending-setting {
+    &:before {
+        content: $ns-icon-sending-setting;
+    }
+}
+.ns-icon-setting {
+    &:before {
+        content: $ns-icon-setting;
+    }
+}
+.ns-icon-sign-in {
+    &:before {
+        content: $ns-icon-sign-in;
+    }
+}
+.ns-icon-sign-out {
+    &:before {
+        content: $ns-icon-sign-out;
+    }
+}
+.ns-icon-small-view {
+    &:before {
+        content: $ns-icon-small-view;
+    }
+}
+.ns-icon-sms {
+    &:before {
+        content: $ns-icon-sms;
+    }
+}
+.ns-icon-sort-by {
+    &:before {
+        content: $ns-icon-sort-by;
+    }
+}
+.ns-icon-square-corner {
+    &:before {
+        content: $ns-icon-square-corner;
+    }
+}
+.ns-icon-start-ordering {
+    &:before {
+        content: $ns-icon-start-ordering;
+    }
+}
+.ns-icon-sub-accounts {
+    &:before {
+        content: $ns-icon-sub-accounts;
+    }
+}
+.ns-icon-support {
+    &:before {
+        content: $ns-icon-support;
+    }
+}
+.ns-icon-tif-file {
+    &:before {
+        content: $ns-icon-tif-file;
+    }
+}
+.ns-icon-upload {
+    &:before {
+        content: $ns-icon-upload;
+    }
+}
+.ns-icon-warranty-terms {
+    &:before {
+        content: $ns-icon-warranty-terms;
+    }
+}
