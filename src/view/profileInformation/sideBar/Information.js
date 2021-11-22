@@ -15,8 +15,8 @@ export default class Informatin extends Component {
                 <div className='d-flex mb-3 padding-start-30'>
                     <div className='border-left'></div>
                     <div>
-                        <div><button className='btn-icon'><AutorenewIcon/></button></div>
-                        <div><button className='btn-icon'><AutorenewIcon/></button></div>
+                        <div><button className='btn-icon'><i className='ns-icon-refresh'></i></button></div>
+                        <div><button className='btn-icon'><i className='ns-icon-refresh'></i></button></div>
                     </div>
                     <div>
                         <div><small className='font-size-12'>Remaining Limit:<strong className='font-size-12 ms-2'>1,369.45 AED</strong></small></div>
