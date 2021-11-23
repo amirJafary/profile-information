@@ -2,6 +2,12 @@ $color-ccc:#ccc;
 $color-eee:#eee;
 $color-000:#000;
 $color-fff:#fff;
+$color-red:#e90404;
+$color-red-dark:#c70909;
+
+.red-dark{
+    color: $color-red-dark;
+}
 
 .card{
     border-radius: 10px !important;
@@ -54,6 +60,25 @@ $color-fff:#fff;
     font-size: 12px;
 }
 
+.text-align-end{
+    text-align: end;
+}
+
+.btn-red{
+    border: 1px solid $color-red-dark;
+    outline: none;
+    background-color:$color-red-dark;
+    color: $color-fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+
+.css-13r4j3i .MuiTextField-root {
+    width: 100% !important;
+    padding-right: 1rem;
+}
+
 a{
     text-decoration: none !important;
     color: $color-000;
@@ -68,4 +93,17 @@ a{
     padding: 10px 15px;
     align-items: flex-start;
     width: fit-content;
+}
+
+.btn-red-outline{
+    border: 1px solid $color-red-dark;
+    outline: none;
+    background-color:$color-fff;
+    color: $color-red-dark;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px 10px;
+    &:hover{
+        background-color: $color-eee;
+    }
 }

@@ -10,7 +10,7 @@ export default class MUSelect extends Component {
         console.table(props);
         super(props);
         this.state={
-            gender:this.props.deafultValue,
+            gender:null,
         }
     }
 
@@ -28,11 +28,10 @@ export default class MUSelect extends Component {
                     <Select
                         labelId="demo-simple-select-standard-label"
                         id={this.props.id}
-                        value={this.state.gender}
                         onChange={this.InputGenderChanged}>
-                        <MenuItem value={0}>{this.props?.firstValue}</MenuItem>
-                        <MenuItem value={1}>{this.props?.secondValue}</MenuItem>
-                        <MenuItem value={2}>{this.props?.thirdValue}</MenuItem>
+                        {this.props.values?.map(item=>
+                            <MenuItem id={item.id} value={item.id}>{item.name}</MenuItem>
+                        )}
                     </Select>
                 </FormControl>
             </div>
