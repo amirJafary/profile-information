@@ -1,27 +1,41 @@
 import React, { Component } from 'react'
 import avatar from '../../../asset/image/avatar.png'
+import Tour from 'reactour'
 
-import {GetBalance} from '../../../services/GetBalance'
-import {GetCredit} from '../../../services/GetCredit'
+import { GetBalance } from '../../../services/GetBalance'
+import { GetCredit } from '../../../services/GetCredit'
 import { GetPersonalInformation } from '../../../services/GetPersonalInformation'
-export default class Informatin extends Component {
+class Information extends Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            balance:0,
-            credit:0,
-            firstName:'',
-            lastName:''
+        this.state = {
+            balance: 0,
+            credit: 0,
+            firstName: '',
+            lastName: '',
+            isTourOpen: true,
         }
     }
-    
-    componentDidMount(){
+
+    //tour methods 
+
+    closeTourClicked = () => {
+        this.setState({ isTourOpen: false })
+    }
+
+    openTourClicked = () => {
+        this.setState({ isTourOpen: true })
+    }
+
+    // end tour event methods 
+
+    componentDidMount() {
         GetBalance(this.GetBalanceCallback);
         GetCredit(this.GetCreditCallback);
         GetPersonalInformation(this.getPersonalInformationCallback);
     }
-    
+
     getPersonalInformationCallback = (res) => {
 
         let firstName = res.firstName;
@@ -33,24 +47,35 @@ export default class Informatin extends Component {
         }, () => console.info(this.state))
     }
 
-    GetBalanceCallback=(res)=>{
+    GetBalanceCallback = (res) => {
         this.setState({
-            balance:res
+            balance: res
         })
     }
 
-    GetCreditCallback=(res)=>{
+    GetCreditCallback = (res) => {
         this.setState({
-            credit:res
+            credit: res
         })
     }
 
     render() {
+        const steps = [
+            {
+                selector: '.first-step',
+                content: 'This is my profile photo`s',
+            },
+            {
+                selector: '.second-step',
+                content: 'This is my phone and name informations',
+            },
+        ]
+        const { isTourOpen } = this.state
         return (
             <div className='card p-2 pb-4'>
                 <div className='d-flex'>
-                    <img className='w-25' src={avatar} alt='avatar'/>
-                    <div className='ms-4'>
+                    <img className='first-step w-25' src={avatar} alt='avatar' />
+                    <div className='second-step ms-4'>
                         <div className='font-size-14 mt-2 fw-bold'>{this.state.firstName} {this.state.lastName}</div>
                         <small className='font-size-12'>+989121111111</small>
                     </div>
@@ -70,7 +95,12 @@ export default class Informatin extends Component {
                     <button className='btn col-6 mb-2'><span></span>Increase Credit</button>
                     <button className='btn col-6'><span></span>Change Password</button>
                 </div>
+                <Tour steps={steps} onRequestClose={this.closeTourClicked} isOpen={isTourOpen} />
+
             </div>
+
         )
     }
 }
+
+export default Information

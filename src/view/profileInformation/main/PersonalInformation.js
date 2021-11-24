@@ -3,6 +3,7 @@ import MUSelect from '../../../component/select/MUSelect'
 import MUTextField from '../../../component/textField/MUTextField'
 import { GetEditPersonalSetting } from '../../../services/GetEditPersonalSetting'
 import { GetPersonalInformation } from '../../../services/GetPersonalInformation'
+import Tour from 'reactour'
 
 import '../../../asset/scss/profileInformation.scss'
 
@@ -36,10 +37,29 @@ export default class PersonalInformation extends Component {
             nationalCode: "",
             stateId: 39,
             trn: "",
-            message: ''
+            message: '',
+            isTourOpen: false
         }
     }
 
+    closeTourClicked = () => {
+        this.setState({ isTourOpen: false })
+    }
+
+    openTourClicked = () => {
+        this.setState({ isTourOpen: true })
+    }
+
+    steps = [
+        {
+            selector: '.third-step',
+            content: 'This is my mobile number',
+        },
+        {
+            selector: '.forth-step',
+            content: 'This is my email address',
+        },
+    ]
 
     componentDidMount() {
         GetPersonalInformation(this.getPersonalInformationCallback);
@@ -105,7 +125,7 @@ export default class PersonalInformation extends Component {
             <div>
                 <div className='card-body'>
                     <div className='fw-bold mb-2'>Personal Information</div>
-                    <span className='d-flex Account-Type flex-column font-size-12 text-align-center'><span>Mobile</span><span className='fw-bold font-size-14'>+989121111111</span></span>
+                    <span className='d-flex third-step Account-Type flex-column font-size-12 text-align-center'><span>Mobile</span><span className='fw-bold font-size-14'>+989121111111</span></span>
                     <div className='d-flex mt-3'>
 
                         <MUSelect inputSelectChanged={(value) => this.inputSelectGenderTypeChanged(value)}
@@ -143,7 +163,7 @@ export default class PersonalInformation extends Component {
                                 textFieldChanged={(value) => this.textFieldBirthDateChanged(value)} />
 
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 forth-step'>
 
                             <MUTextField deafultValue={this.state.email}
                                 id='Email'
@@ -180,8 +200,10 @@ export default class PersonalInformation extends Component {
                     <div className='mt-5 text-align-end w-100'>
                         <button onClick={this.saveButtonClicked} className='btn-red'><i className='ns-icon-save me-2'></i>save</button>
                         <button onClick={this.discardButtonClicked} className='btn-red-outline ms-2'><i className='ns-icon-close red-dark me-2'></i>discard</button>
+                        <button onClick={this.openTourClicked} className='btn-red-outline ms-2'><i className='ns-icon-close red-dark me-2'></i>open tours</button>
                     </div>
                 </div>
+                <Tour steps={this.steps} onRequestClose={this.closeTourClicked} isOpen={this.state.isTourOpen}/>
             </div>
         )
     }
