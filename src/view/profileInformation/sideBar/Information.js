@@ -14,7 +14,7 @@ class Information extends Component {
             credit: 0,
             firstName: '',
             lastName: '',
-            isTourOpen: true,
+            isTourOpen: false,
         }
     }
 

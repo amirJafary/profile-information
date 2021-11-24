@@ -5,7 +5,7 @@ import Main from './main/Main'
 export default class Preparing extends Component {
     render() {
         return (
-            <div>
+            <div className='container d-flex py-5'>
                 <SideBar/>
                 <Main/>
             </div>
