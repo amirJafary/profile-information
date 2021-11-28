@@ -1,6 +1,7 @@
 $color-ccc:#ccc;
 $color-eee:#eee;
 $color-000:#000;
+$color-000-50:rgba(0,0,0,.5);
 $color-fff:#fff;
 $color-red:#e90404;
 $color-red-dark:#c70909;
@@ -25,6 +26,20 @@ $color-red-dark:#c70909;
     font-size: 1.5rem !important;
 }
 
+.css-1gsv261{
+    border-bottom:none !important
+}
+
+.css-1aquho2-MuiTabs-indicator{
+    background-color: $color-red-dark !important;
+}
+
+.width-hright-25{
+    width: 35px !important;
+    height: 30px !important;
+    padding: 5px;
+}
+
 .element-under-grid{
     background-color: $color-eee;
     border-radius: 0px 0px 10px 10px;
@@ -46,10 +61,24 @@ $color-red-dark:#c70909;
 
 .ag-layout-normal{
     height: auto !important;
+    min-height: 300px !important;
 }
 
 .ag-cell-auto-height.ag-cell-wrap-text, .ag-cell-value{
     line-height: 1.7rem;
     padding: 5px 7px;
     word-wrap: nowrap;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    font-size: .75rem !important;
+    color: $color-000-50 !important;
+    padding: 12px 45px !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: $color-000 !important;
+    font-weight: bold !important;
 }

@@ -1,9 +1,9 @@
 import axios from "axios"
 
-const PostPreparing = (callback,pageLength,deafultPageNumber) => {
-    let url = 'http://172.17.17.101:8088/api/en/Order/SharedSheetOrderByState/Preparing?';
+const PostFailed = (callback,pageLength,deafultPageNumber) => {
+    let url = 'http://172.17.17.101:8088/api/en/Order/SharedSheetOrderByState/Failed?';
     let data = {
-        currentPageIndex: deafultPageNumber,
+        currentPageIndex: 1,
         filter:{
             categoryId: null,
             fromConfirmDate: null,
@@ -17,7 +17,7 @@ const PostPreparing = (callback,pageLength,deafultPageNumber) => {
             turnaround: null,
             twoSidePrintingType: null,
         },
-        pageLength: pageLength
+        pageLength: 10
     };
     let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEyMzMiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2MzgwMzA1MTUsImV4cCI6MTY0MDYyMjUxNSwiaWF0IjoxNjM4MDMwNTE1fQ.-DuGEEUxMOdQGKWqIDLbwSNk-TIpeXOEXsm4s8DFSIg';
 
@@ -29,4 +29,4 @@ const PostPreparing = (callback,pageLength,deafultPageNumber) => {
         .then(res => { callback(res.data.messageItems[0].data) })
 }
 
-export { PostPreparing };
+export { PostFailed };
