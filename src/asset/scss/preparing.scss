@@ -1,3 +1,10 @@
+$color-ccc:#ccc;
+$color-eee:#eee;
+$color-000:#000;
+$color-fff:#fff;
+$color-red:#e90404;
+$color-red-dark:#c70909;
+
 .my-spinner {
     width: 40px;
     position: absolute;
@@ -16,4 +23,33 @@
     background-color: transparent !important;
     outline: none !important;
     font-size: 1.5rem !important;
+}
+
+.element-under-grid{
+    background-color: $color-eee;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid $color-ccc;
+}
+
+.bg-ccc{
+    background-color: $color-ccc;
+}
+
+.css-1869usk-MuiFormControl-root{
+    min-width: 25px !important;
+    margin: 0 !important;
+}
+
+.font-size-18{
+    font-size: 18px !important;
+}
+
+.ag-layout-normal{
+    height: auto !important;
+}
+
+.ag-cell-auto-height.ag-cell-wrap-text, .ag-cell-value{
+    line-height: 1.7rem;
+    padding: 5px 7px;
+    word-wrap: nowrap;
 }

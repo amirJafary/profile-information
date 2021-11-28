@@ -44,7 +44,7 @@ class Information extends Component {
         this.setState({
             firstName: firstName,
             lastName: lastName,
-        }, () => console.info(this.state))
+        })
     }
 
     GetBalanceCallback = (res) => {

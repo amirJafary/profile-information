@@ -26,7 +26,7 @@ export default class MUSelect extends Component {
         return (
             <div>
                 <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="demo-simple-select-standard-label">{this.props?.label}</InputLabel>
+                    {this.props?.label && <InputLabel id="demo-simple-select-standard-label">{this.props?.label}</InputLabel>}
                     <Select
                         value={this.state.gender}
                         labelId="demo-simple-select-standard-label"
