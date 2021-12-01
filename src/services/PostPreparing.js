@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const PostPreparing = (callback,pageLength,deafultPageNumber) => {
+const PostPreparing = (callback,pageLength,deafultPageNumber,searchText) => {
     let url = 'http://172.17.17.101:8088/api/en/Order/SharedSheetOrderByState/Preparing?';
     let data = {
         currentPageIndex: deafultPageNumber,
@@ -10,7 +10,7 @@ const PostPreparing = (callback,pageLength,deafultPageNumber) => {
             fromSubmitDate: null,
             hasTransferRequest: false,
             invoiceId: null,
-            searchTerm: "",
+            searchTerm: searchText,
             sharedSheetOrderIds: [],
             toConfirmDate: null,
             toSubmitDate: null,

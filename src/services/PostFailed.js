@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const PostFailed = (callback,pageLength,deafultPageNumber) => {
+const PostFailed = (callback,pageLength,deafultPageNumber,searchText) => {
     let url = 'http://172.17.17.101:8088/api/en/Order/SharedSheetOrderByState/Failed?';
     let data = {
         currentPageIndex: 1,
@@ -10,7 +10,7 @@ const PostFailed = (callback,pageLength,deafultPageNumber) => {
             fromSubmitDate: null,
             hasTransferRequest: false,
             invoiceId: null,
-            searchTerm: "",
+            searchTerm: searchText,
             sharedSheetOrderIds: [],
             toConfirmDate: null,
             toSubmitDate: null,
