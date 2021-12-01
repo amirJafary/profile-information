@@ -1,0 +1,33 @@
+$color-ccc:#ccc;
+$color-eee:#eee;
+$color-000:#000;
+$color-000-50:rgba(0,0,0,.5);
+$color-f5f5f5:#f5f5f5;
+$color-fff:#fff;
+$color-red:#e90404;
+$color-red-dark:#c70909;
+
+.box-informations{
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: $color-eee;
+    margin-right: 7px;
+
+    &-header{
+        font-weight:normal;
+        text-align: start !important;
+        font-size: 12px;
+    }
+
+    &-body{
+        font-weight:bold;
+        align-items: center !important;
+        color: $color-000-50;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+}

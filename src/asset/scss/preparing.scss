@@ -2,9 +2,35 @@ $color-ccc:#ccc;
 $color-eee:#eee;
 $color-000:#000;
 $color-000-50:rgba(0,0,0,.5);
+$color-f5f5f5:#f5f5f5;
 $color-fff:#fff;
 $color-red:#e90404;
 $color-red-dark:#c70909;
+
+.bg-f5f5f5{
+    background-color: $color-f5f5f5;
+}
+
+.search-input{
+    outline: none;
+    border: none;
+}
+
+.h2,.h3,.h4,.h5,.h6{
+    margin: 0 !important;
+}
+
+.bg-red-dark{
+    background-color: $color-red-dark;
+}
+
+.bg-000{
+    background-color: $color-000;
+}
+
+.ns-icon-search{
+    color: $color-000-50;
+}
 
 .my-spinner {
     width: 40px;
@@ -15,6 +41,16 @@ $color-red-dark:#c70909;
 
 .my-renderer {
     margin-left: 20px;
+}
+
+.btn-red{
+    border: 1px solid $color-red-dark;
+    outline: none;
+    background-color:$color-red-dark;
+    color: $color-fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px 10px;
 }
 
 .btn-icon-detail{

@@ -49,7 +49,7 @@ export default class AGGrid extends Component {
         const cellRender = (e) => {
             // console.info('this is e =>',e.value)
             return (
-                <span className='btn-icon-detail'><a href={`/preparing/${e.value}`}><i className='ns-icon-invoice-details' /></a></span>
+                <span onClick={this.props?.orderDetaileClicked(e)} className='btn-icon-detail'><a href={`/preparing/${e.value}`}><i className='ns-icon-invoice-details' /></a></span>
             )
         }
 
@@ -69,7 +69,7 @@ export default class AGGrid extends Component {
                     onGridReady={this.onGridReady}>
                     <AgGridColumn minWidth='80' headerName="Action" field="id" cellRendererFramework={(e,value)=>cellRender(e,value)} />
                     <AgGridColumn minWidth='100' headerName="Status" field="sharedSheetOrderStateType" />
-                    <AgGridColumn minWidth='150' headerName="Submit Date" field="createDate" />
+                    <AgGridColumn minWidth='150' headerName="Submit Date" field="splitedTime" />
                     <AgGridColumn minWidth='250' headerName="Product Name" field="productName" />
                     <AgGridColumn minWidth='120' headerName="Printed Side" field="twoSidePrintingText" />
                     <AgGridColumn minWidth='100' headerName="Turnaround" field="turnaroundText" />
