@@ -8,7 +8,7 @@ export default class Orders extends Component {
             <div className='card p-3 mt-2'>
                 <div className='ps-1 pb-1'><i className='ns-icon-my-orders align-middle me-2 h2'></i><a href='#1'>My Orders</a></div>
                 <div className='ps-3 pb-1'><i className='ns-icon-cart align-middle me-2 h2'></i><a href='#1'>Cart</a></div>
-                <div className='ps-3 pb-1'><i className='ns-icon-preparing-order align-middle me-2 h2'></i><a href='#1'>Preparing</a></div>
+                <div className='ps-3 pb-1'><i className='ns-icon-preparing-order align-middle me-2 h2'></i><a href='/preparing'>Preparing</a></div>
                 <div className='ps-3 pb-1'><i className='ns-icon-inproccess-order align-middle me-2 h2'></i><a href='#1'>In Process</a></div>
                 <div className='ps-3 pb-1'><i className='ns-icon-ready-order align-middle me-2 h2'></i><a href='#1'>Ready To Deliver</a></div>
                 <div className='ps-3 pb-1'><i className='ns-icon-archived-order align-middle me-2 h2'></i><a href='#1'>Archive</a></div>

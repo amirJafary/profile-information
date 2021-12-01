@@ -25,6 +25,8 @@ export default class Main extends Component {
             totalFailed: null,
             orderInformationsFailed: [],
             allPaginationNumberFailed: 1,
+            searchText:'',
+            idOfOrder:null,
         }
     }
 
@@ -44,13 +46,18 @@ export default class Main extends Component {
         let total = res.totalCount
         temp.map(item => item.turnaround === 1 ? item.turnaroundText = 'normal' : item.turnaroundText = 'express');
         temp.map(item => item.twoSidePrintingType === 2 ? item.twoSidePrintingText = "front and back" : item.twoSidePrintingText = "front only");
+        // temp.map(item => item.createDate? console.info(item.createDate.split('T')) :null);
+        // temp.map(item => item.createDate ? item.splitedTime = (item.createDate.split('T')) : null);
+        temp.map(item => item.createDate ? item.splitedTime = (item.createDate.split('T')) : null);
+        // let createDate = temp.map(item => item.createDate.split('T'));
+        temp.map(item => item?.splitedTime ? item.splitedTimefinally = (item?.splitedTime?.splice(5)) : null);
         let numberOfRows = this.state.pageLength
-        // console.log(res);
+        console.log(res);
         this.setState({
             total: total,
             orderInformations: temp,
             allPaginationNumber: Math.ceil(total / numberOfRows),
-        }, () => console.info(this.state.allPaginationNumber))
+        }, () => console.info())
     }
 
     PostFailedCallback = (res) => {
@@ -59,7 +66,7 @@ export default class Main extends Component {
         temp.map(item => item?.turnaround === 1 ? item.turnaroundText = 'normal' : item.turnaroundText = 'express');
         temp.map(item => item?.twoSidePrintingType === 2 ? item.twoSidePrintingText = "front and back" : item.twoSidePrintingText = "front only");
         let numberOfRows = this.state.pageLength
-        // console.log(res);
+
         this.setState({
             totalFailed: total,
             orderInformations: [],
@@ -92,10 +99,26 @@ export default class Main extends Component {
         this.setState({
             valueOfTab: firstValueOfTab
         }, () => {
-            this.state.valueOfTab === 2
-                ? PostFailed(this.PostFailedCallback, this.state.pageLength, this.state.deafultPageNumber)
-                : PostPreparing(this.PostPreparingCallback, this.state.pageLength, this.state.deafultPageNumber)
+            this.state.valueOfTab === 1
+                ? PostPreparing(this.PostPreparingCallback, this.state.pageLength, this.state.deafultPageNumber)
+                : PostFailed(this.PostFailedCallback, this.state.pageLength, this.state.deafultPageNumber)
         })
+    }
+
+    inputSearchChanged=(e)=>{
+        this.setState({
+            searchText:e.target.value
+        },()=>{
+            PostPreparing(this.PostPreparingCallback, this.state.pageLength, this.state.deafultPageNumber,this.state.searchText);
+            PostFailed(this.PostFailedCallback, this.state.pageLength, this.state.deafultPageNumber,this.state.searchText)
+            console.info(this.state.searchText)
+        })
+    }
+
+    orderDetaileClicked=(e)=>{
+        this.setState({
+            idOfOrder:e.value
+        },()=>console.info(e.value))
     }
 
     render() {
@@ -106,13 +129,15 @@ export default class Main extends Component {
                     <i className='align-middle h2 pe-2 ns-icon-preparing-order'></i>
                     <span className='fw-bold font-size-18 '>Preparing</span>
                 </div>
-                <div>
-                    
-                </div>
-                <div className='card-body px-3 pt-2 pb-5 '>
+                <div className='card-body px-3 mt-3 pt-2 pb-5 '>
+                    <div className='d-flex w-100 text-align-center justify-content-stretch align-items-center'>
+                        <span className='d-flex p-1 bg-f5f5f5'><i className='ns-icon-search h3'></i></span>
+                        <input onChange={this.inputSearchChanged} className='col-10 h-100 p-2 justify-content-strech pe-2 search-input me-2 bg-f5f5f5 ' placeholder='Search in Product Name ...' type='text' />
+                        <button className='btn-red px-3'>Search</button>
+                    </div>
                     <div>
                         <MUTabs valueOfTab={this.state.valueOfTab} GetValueOfTabs={this.GetValueOfTabs} />
-                        <AGGrid valueOfTab={this.state.valueOfTab} orderInformations={this.state.orderInformations} />
+                        <AGGrid orderDetaileClicked={this.orderDetaileClicked} valueOfTab={this.state.valueOfTab} orderInformations={this.state.orderInformations} />
                     </div>
                     <div className="d-flex flex-md-row bg-ccc justify-content-end element-under-grid p-2">
                         <div className="d-flex flex-md-row">
