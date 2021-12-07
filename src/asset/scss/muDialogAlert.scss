@@ -1,0 +1,35 @@
+@import 'globalStyles.scss';
+
+.btn{
+
+    &-red{
+        @extend %btn;
+        background-color: $color-red-dark;
+        border: $border-1-red;
+        color: $color-fff;
+    }
+
+    &-white{
+        @extend %btn;
+        background-color: $color-fff;
+        border: $border-1-red;
+        color: $color-red-dark;
+    }
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    width: 500px;
+    height: 250px;
+}
+
+.ns-icon-exclemation{
+    color:#ff8000;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    min-height: 150px !important;
+}
+
+.text-overflow-ellipsis{
+    text-overflow: ellipsis;
+}
