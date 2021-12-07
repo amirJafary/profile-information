@@ -1,0 +1,95 @@
+@import 'globalStyles.scss';
+
+.file-manager{
+
+    .new-folder-btn{
+        border: $border-1-000;
+        outline: none;
+        border-radius: 5px;
+        display: flex;
+        width: fit-content;
+        align-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: transparent;
+        font-size: $fs-14;
+    }
+
+    .section-one{
+
+        border: $border-1-ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $color-fff;
+        justify-content: space-between;
+    }
+    
+    .section-two{
+        border: $border-1-ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $color-fff;
+        justify-content: space-between;
+        height: 525px;
+    }
+
+    .section-three{
+        border: $border-1-ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-x: hidden !important;
+        background-color: $color-fff;
+
+        &-header{
+            justify-content: space-between;
+            background-color: $color-eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        &-right{
+            background-color: $color-eee;
+            border-radius: 5px;
+            overflow: hidden;
+            min-height: 450px;
+            padding: 100px 25px;
+
+            .ns-icon-no-item-selected{
+                font-size: 250px;
+                color: $color-ccc;
+            }
+
+            .word-break{
+                word-break: break-all;
+            }
+        }
+
+        &-left{
+            flex-wrap: wrap;
+            height:450px;
+            overflow-x: hidden !important;
+
+            .ns-icon-folder-thumbnail{
+                font-size: 6rem;
+                color: $color-000-50;
+            }
+
+            .folder-name{
+                text-overflow: ellipsis;
+                font-size: $fs-10;
+                flex-wrap: nowrap;
+                overflow: hidden;
+            }
+        }
+        
+    }
+
+    .w-20{
+        width: 20% !important;
+    }
+
+    .padding-auto{
+        padding: 50px 25px;;
+    }
+
+}
