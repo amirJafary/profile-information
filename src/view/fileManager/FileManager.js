@@ -125,8 +125,8 @@ class FileManager extends Component {
         }, () => console.info(this.state.fileId, this.state.fileName, this.state.fileIsFolder, this.state.fileParentId, this.state.fileThumbnail))
     }
 
-    fileOnDoubleClicked=()=>{
-        GetFileAndFoldersOnDoubleClicked(this.GetFileAndFoldersCallback,this.state.fileId);
+    fileOnDoubleClicked = () => {
+        GetFileAndFoldersOnDoubleClicked(this.GetFileAndFoldersCallback, this.state.fileId);
     }
 
     newFolderButtonClicked = () => {
@@ -204,7 +204,6 @@ class FileManager extends Component {
                         <i className='ns-icon-new-folder me-2'></i>
                         <span>New Folder</span>
                     </button>
-                    {/* deafultName={this.state.deafultName} */}
                     <MUDialog key={this.state.open} createFileButtonClicked={(name) => this.createFileButtonClicked(name)}
                         open={this.state.open}
                         titleText='Create New Folder '
@@ -238,7 +237,7 @@ class FileManager extends Component {
                                     <i className='ns-icon-upload me-2'></i>
                                     <span>Upload File</span>
                                 </button>
-                                <MUDialog key={this.state.openDialog} 
+                                <MUDialog key={this.state.openDialog}
                                     createFileButtonClicked={(name) => this.createFileButtonClicked(name)}
                                     openDialog={this.state.openDialog}
                                     titleText='Upload File '
@@ -252,19 +251,18 @@ class FileManager extends Component {
                             </div>
                         </div>
                         <div className='d-flex mt-2'>
-                            <div className='section-three-left overflow-auto d-flex col-8'>
+                            <div className='section-three-left align-items-end overflow-auto d-flex col-8'>
 
-                                {this.state.folderNames.map((item, index) =>
+                                {this.state.folderNames.map((item) =>
                                     item.isFolder ?
                                         <div onDoubleClick={this.fileOnDoubleClicked} onClick={() => this.fileClicked(item.id, item.name, item.isFolder, item.parentId, item.thumbnail)} className='d-flex flex-column w-20 text-center'>
                                             <i className='ns-icon-folder-thumbnail'></i>
                                             <span className='folder-name overflow-hidden px-2'>{item.name}</span>
                                         </div>
                                         :
-                                        <div onClick={() => this.fileClicked(item.id, item.name, item.isFolder, item.parentId, item.thumbnail)} className='d-flex flex-column w-20 text-center'>
-                                            {/* <img url={item.thumbnail} key={item.index} alt={item.name} /> */}
+                                        <div className='d-flex flex-column w-20 p-2 text-center' onClick={() => this.fileClicked(item.id, item.name, item.isFolder, item.parentId, item.thumbnail)}>
                                             <GetImajeSrcFromAPI thumbnail={item.thumbnail} />
-                                            <span className='folder-name overflow-hidden px-2'>{item.name}</span>
+                                            <div className='folder-name overflow-hidden px-2'>{item.name}</div>
                                         </div>
                                 )}
 
