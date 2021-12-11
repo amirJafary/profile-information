@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import {GetFiles} from '../../services/GetFiles'
+import '../../asset/scss/fileManager.scss'
 
 class GetImajeSrcFromAPI extends Component {
   
@@ -22,7 +23,7 @@ class GetImajeSrcFromAPI extends Component {
         });
     }
     render(){
-        return(<img src={this.state.thumbnailContent} alt='file manager imajes'/>);
+        return(<img className='w-100' src={this.state.thumbnailContent} alt='file manager imajes' style={{maxHeight:'100px'}}/>);
     }
 }
 
