@@ -10,7 +10,6 @@ import { PostRename } from '../../services/PostRename'
 import { GetFileAndFoldersOnDoubleClicked } from '../../services/GetFileAndFoldersOnDoubleClicked'
 import MUDialog from '../../component/dialog/MUDialog'
 import MUDialogAlert from '../../component/dialog/MUDialogAlert'
-// import { GetFiles } from '../../services/GetFiles'
 import GetImajeSrcFromAPI from './GetImajeSrcFromAPI'
 
 class FileManager extends Component {
@@ -238,10 +237,12 @@ class FileManager extends Component {
                                     <span>Upload File</span>
                                 </button>
                                 <MUDialog key={this.state.openDialog}
+                                    folderNames={this.state.folderNames}
                                     createFileButtonClicked={(name) => this.createFileButtonClicked(name)}
                                     openDialog={this.state.openDialog}
                                     titleText='Upload File '
                                     ok={false}
+                                    GetFileAndFoldersCallback={this.GetFileAndFoldersCallback}
                                     stateOpenDialogChanged={(openDialog) => this.stateOpenDialogChanged(openDialog)} />
 
                                 <button onClick={() => GetFileAndFolders(this.GetFileAndFoldersCallback)} className='new-folder-btn py-1'>
@@ -252,7 +253,6 @@ class FileManager extends Component {
                         </div>
                         <div className='d-flex mt-2'>
                             <div className='section-three-left align-items-end overflow-auto d-flex col-8'>
-
                                 {this.state.folderNames.map((item) =>
                                     item.isFolder ?
                                         <div onDoubleClick={this.fileOnDoubleClicked} onClick={() => this.fileClicked(item.id, item.name, item.isFolder, item.parentId, item.thumbnail)} className='d-flex flex-column w-20 text-center'>

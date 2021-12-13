@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 
-import {GetFiles} from '../../services/GetFiles'
+import { GetFiles } from '../../services/GetFiles'
 import '../../asset/scss/fileManager.scss'
 
 class GetImajeSrcFromAPI extends Component {
-  
-    constructor(props){
+
+    constructor(props) {
         super(props);
         this.state = {
             thumbnailUrl: props.thumbnail,
             thumbnailContent: ''
         };
     }
-    
-    componentDidMount(){
-        GetFiles(this.GetFilesCallback,this.state.thumbnailUrl)
+
+    componentDidMount() {
+        GetFiles(this.GetFilesCallback, this.state.thumbnailUrl)
     }
 
     GetFilesCallback = (res) => {
@@ -22,8 +22,9 @@ class GetImajeSrcFromAPI extends Component {
             thumbnailContent: res
         });
     }
-    render(){
-        return(<img className='w-100' src={this.state.thumbnailContent} alt='file manager imajes' style={{maxHeight:'100px'}}/>);
+
+    render() {
+        return (<img className='w-100' src={this.state.thumbnailContent} alt='file manager imajes' style={{ maxHeight: '100px' }} />);
     }
 }
 
